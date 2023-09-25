@@ -99,11 +99,11 @@ header {
 }
 
 #frase-logo{
-    font-size: 2px;
+    font-size: 9px;
     margin-top: 2px;
     margin-bottom: 80px;
     background-color: black;
-color: white;
+    color: white;
     background-color: rgba(0, 0, 0, 0.5);
     
 }
