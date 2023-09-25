@@ -1,0 +1,334 @@
+/* Reset de estilos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilo do corpo da página */
+body {
+    background-image: url('castle-door.jpeg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-family: 'Cinzel Decorative', sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    background-position: center center;
+    background-attachment: fixed;    
+}
+
+body::after { content: ''; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent, rgba(0, 0, 0, 0.5));
+ pointer-events: none; }
+
+
+
+/* intro */
+.fundo-inicial {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: text-blur-out 2s 2s forwards;
+  z-index: 100; 
+}
+
+
+.intro-texto-reveal {
+  background: linear-gradient(to right, red, white);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+  animation: focus-in-contract-bck 2s, text-blur-out 2s 3s forwards;
+  z-index: 101;
+}
+
+@-webkit-keyframes focus-in-contract-bck{
+    0%{
+        letter-spacing:10px;
+        -webkit-transform:translateZ(300px);
+        transform:translateZ(300px);
+        -webkit-filter:blur(12px);
+        filter:blur(12px);
+        opacity:0
+    }
+    100%{
+        -webkit-transform:translateZ(12px);
+        transform:translateZ(12px);
+        -webkit-filter:blur(0);
+        filter:blur(0);
+        opacity:1
+    }
+}
+
+@-webkit-keyframes text-blur-out{
+    0%{
+        -webkit-filter:blur(.01);
+        filter:blur(.01)
+    }
+    100%{
+        -webkit-filter:blur(12px) opacity(0);
+        filter:blur(12px) 
+        opacity(0)
+    }
+}
+
+        /*      */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px; /* Aumenta a distância entre o header e a parte superior da página */
+  margin-bottom: 20px; /* Aumenta a distância entre o header e o próximo elemento */
+}
+
+.logo-container img {
+    filter: brightness(1.2) contrast(1.2);
+    margin-bottom: -20px;
+    margin-top: -30px ;
+    
+}
+
+#frase-logo{
+    font-size: 2px;
+    margin-top: 2px;
+    margin-bottom: 80px;
+    background-color: black;
+color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* formulário abaixo*/
+main {
+ pointer-events: auto;
+  border: 1px solid #ff4500; /* Borda laranja mais escura e mais fina */
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro transparente */
+  padding: 20px; /* Espaçamento interno para não deixar o conteúdo colado na borda */
+  margin-bottom: 50px; /* Espaço no fim da página */
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* ou qualquer outra porcentagem que você preferir */
+  box-shadow: 0px 0px 15px rgba(255,69,0,0.6); /* Sombra laranja escura com raio de desfoque maior e cor mais suave */
+}
+
+
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 100%; 
+    }     
+}
+
+
+@media screen and (min-width: 600px) {
+.logo-container img {
+    filter: brightness(1.2) contrast(1.2);
+    margin-bottom: 35px;
+     z-index: - 2;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px; /* Aumenta a distância entre o header e a parte superior da página */
+  margin-bottom: 10px; /* Aumenta a distância entre o header e o próximo elemento */
+}
+
+   #frase-logo{
+    font-size: 10px;
+    margin-top: -55px;
+    margin-bottom: 80px;
+    z-index: 100;
+    text-shadow: 2px 2px 4px #000000;
+   background-color: black;
+color: white;
+
+   } 
+    main {
+        width: 40%; /* Diminui a largura para 50% em telas maiores */
+        pointer-events: auto;
+        h1 {
+    margin-bottom: 200px; /* Ajuste este valor conforme necessário */
+    margin-top: 800px;
+}
+.frase1{
+    margin-top: -30px;
+    margin-bottom: 200;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px grey;
+    Iz-index: 8;
+}
+
+    }
+}
+
+/* mobile */
+
+ h1 {
+  font-size: 40px;
+  margin-top: 20px; /* Aumenta a distância entre o header e a parte superior da página */
+  margin-bottom: 20px; /* Aumenta a distância entre o header e o próximo elemento */
+  background: -webkit-linear-gradient(white, #ffcccc, #ff9999, #ff6666, #ff3333, #ff0000); /* Gradiente suave do branco para o vermelho */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 2;
+}
+
+
+.frase1 {
+    margin-top: 50px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px grey;
+    z-index: 5;
+}
+
+}
+
+
+
+
+    /* Estilizando os rótulos (labels) */
+    label {
+        display: inline-block;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+
+
+
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select {
+    background-color: transparent;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(#FFFFFF, #FED8B1); /* Gradiente de branco para laranja claro */    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff; /* Mantém a cor do texto branca */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    margin-bottom: 10px;
+}
+
+   
+}
+
+
+.swal2-popup {
+  max-width: 200px !important;
+}
+
+
+
+
+
+
+
+button[type="submit"] {
+  background-color: #ff4500; /* Cor de fundo laranja escuro */
+  color: white; /* Cor do texto branco */
+  padding: 10px 20px; /* Espaçamento interno menor */
+  text-align: center; /* Alinhamento do texto */
+  text-decoration: none; /* Remove o sublinhado */
+  display: inline-block;
+  font-size: 14px; /* Tamanho da fonte menor */
+  margin: 4px 2px;
+  cursor: pointer; /* Muda o cursor para uma mão quando passa por cima */
+  border-radius: 4px; /* Borda arredondada */
+  font-family: 'Cinzel Decorative', cursive; /* Fonte do texto */
+  margin-top: 10px;
+  z-index: 3;
+}
+
+
+
+
+/* Estilo do rodapé */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 10px
+    
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 10px
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+/* Estilo dos ícones sociais (substitua com seus próprios ícones) */
+footer div {
+    margin-top: 10px;
+}
+
+footer div a {
+    margin-right: 10px;
+    color: #fff;
+    font-size: 15px;
+}
+
+/*  imagem rodapé */
+.imagem-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.conteudo-centralizado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.imagem-com-texto {
+  display: flex;
+  align-items: center;
+}
+
+.texto-junto-imagem {
+  margin-top: -10px;
+}
+ 
